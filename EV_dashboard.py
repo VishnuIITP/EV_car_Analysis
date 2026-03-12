@@ -41,6 +41,8 @@ import plotly.express as px
 # ----------------------
 df = pd.read_csv("EV_cleaned.csv")
 
+brand_count = df.groupby("Brand")["Model"].count().reset_index()
+brand_count.rename(columns={"Model": "Count"}, inplace=True)
 # Plot
 # ----------------------
 st.subheader("1️⃣ EV Models by Brand")
