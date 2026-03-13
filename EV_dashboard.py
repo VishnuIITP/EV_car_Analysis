@@ -20,7 +20,11 @@ st.set_page_config(page_title="EV Market Analysis", layout="wide")
 # Title & Description
 # ----------------------
 st.title("🚗 Electric Vehicle Market Analysis - India")
+
 st.markdown("""
+**Author:** Vishnu Kumar  
+**Project:** Web Scraping + Data Analysis + Visualization  
+
 This dashboard presents insights on the Indian EV market.
 Data is collected from **CarDekho** and includes:
 - Brand & Model
