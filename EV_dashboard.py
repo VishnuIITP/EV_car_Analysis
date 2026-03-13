@@ -6,12 +6,6 @@ import pandas as pd
 import plotly.express as px
 
 # ----------------------
-# Load Data
-# ----------------------
-# Make sure your cleaned dataset is saved as 'EV_cleaned.csv'
-
-
-# ----------------------
 # Page Config
 # ----------------------
 st.set_page_config(page_title="EV Market Analysis", layout="wide")
@@ -45,6 +39,22 @@ import plotly.express as px
 # ----------------------
 df = pd.read_csv("EV_cleaned.csv")
 
+# Convert price to numeric (if needed)
+
+# Metrics
+total_models = df.shape[0]
+avg_range = round(df["Range"].mean(),1)
+avg_price = round(df["Price"].mean(),2)
+avg_battery = round(df["Battery"].mean(),2)
+
+# Dashboard metrics
+col1, col2, col3, col4 = st.columns(4)
+
+col1.metric("Total EV Models", total_models)
+col2.metric("Average Range (km)", avg_range)
+col3.metric("Average Price (Lakh ₹)", avg_price)
+col4.metric("Average Battery Capacity (kWh)", avg_battery)
+
 brand_count = df.groupby("Brand")["Model"].count().reset_index()
 brand_count.rename(columns={"Model": "Count"}, inplace=True)
 # Plot
@@ -71,7 +81,7 @@ st.markdown("""
 - Clear segmentation exists: volume vs premium vs mid-range strategies.
 """)
 
-st.subheader("Price vs Driving Range of All EVs in India")
+st.subheader("2️⃣ Price vs Driving Range of All EVs in India")
 
 # Scatter plot for all EVs
 fig = px.scatter(
@@ -100,7 +110,7 @@ st.markdown("""
 - Hovering over points reveals **model-specific price, battery, and power**.
 """)
 
-st.subheader("Battery Capacity vs Driving Range of EVs")
+st.subheader("3️⃣ Battery Capacity vs Driving Range of EVs")
 
 # Scatter plot
 fig = px.scatter(
@@ -126,7 +136,7 @@ st.markdown("""
 """)
 
 
-st.subheader("Average EV Price by Brand")
+st.subheader("4️⃣ Average EV Price by Brand")
 
 # Calculate average price per brand
 avg_price = df.groupby("Brand")["Price"].mean().reset_index()
@@ -154,7 +164,7 @@ st.markdown("""
 - This chart clearly shows the **market segmentation**: premium vs mid-range vs affordable EVs.
 """)
 
-st.subheader("Driving Range Distribution of EVs")
+st.subheader("5️⃣ Driving Range Distribution of EVs")
 
 # Histogram
 fig = px.histogram(
