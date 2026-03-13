@@ -1,6 +1,13 @@
 # Electric Vehicle Market Analysis - India
 
-This project is a **Streamlit dashboard** that visualizes the Indian Electric Vehicle (EV) market using data collected from [CarDekho](https://www.cardekho.com/electric-cars).  
+This project is a **Streamlit dashboard** that visualizes the Indian Electric Vehicle (EV) market using data collected from [CarDekho](https://www.cardekho.com/electric-cars). 
+
+## 🚀 Live Dashboard
+
+Explore the interactive dashboard here:
+
+🔗 https://evcaranalysis-a9cv2q7amg3gg4d23zhjrv.streamlit.app/
+
 It provides insights into **price, driving range, battery capacity, and brand segmentation** for EVs in India.
 
 ---
