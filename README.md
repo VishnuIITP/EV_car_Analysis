@@ -44,13 +44,3 @@ pip install -r requirements.txt
 # Run the Streamlit dashboard
 streamlit run EV_dashboard.py
 
-st.plotly_chart(fig)
-
-# Insights
-st.markdown("""
-**Insights:**
-
-- **Most EVs in India fall into the 400–500 km range**, which is currently the mainstream segment.
-- Premium EVs extend beyond 500 km, highlighting **high-end market targeting longer range**.
-- Histogram helps identify **popular range segments and outliers** in the market.
-""")
