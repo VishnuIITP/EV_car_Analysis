@@ -90,9 +90,11 @@ fig = px.scatter(
     y="Range",
     color="Brand",
     hover_data=["Model", "Battery", "Power"],
+    size="Battery",
     title="Price vs Driving Range",
     height=600,
-    width=900
+    width=900,
+    size_max = 15
 )
 
 st.plotly_chart(fig)
@@ -118,6 +120,8 @@ fig = px.scatter(
     x="Battery",
     y="Range",
     color="Brand",
+    size='Range',
+    size_max = 20,
     hover_data=["Model", "Price", "Power"],
     title="Battery Capacity vs Driving Range",
     height=600,
