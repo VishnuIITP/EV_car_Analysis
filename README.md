@@ -11,6 +11,12 @@ Explore the interactive dashboard here:
 It provides insights into **price, driving range, battery capacity, and brand segmentation** for EVs in India.
 
 ---
+## Dataset
+
+The cleaned dataset used in this project is publicly available on Kaggle.
+
+Kaggle Dataset:  
+https://www.kaggle.com/datasets/visnukumar/indian-electric-vehicle-dataset
 
 ## Features
 
